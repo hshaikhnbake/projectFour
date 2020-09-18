@@ -8,41 +8,100 @@
 </head>
 
 <body>
+
+  <section class="cityRestaurants">
+    <!-- Where 'top 10 restaurants' will dynamically append when chosen city is clicked -->
+    <!--`
+        <h2>${city}</h2>
+        <ul>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+          <button>
+            <li>
+              <h3>${restaurant.name}</h3>
+              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
+            </li>
+          </button>
+        </ul>  
+        `-->
+  </section>
+  <section class="restaurantDetails">
+    <!-- Where a restaurant, chosen above ('on click'), will dynamically append it's details -->
+    <!--` 
+        <h3>${restaurant.name}</h3>
+        <p>Specialty: ${restaurant.cuisines}</p>
+        <p>Location: ${restaurant.address}</p> OR <p>Neighborhood: ${restaurant.locality}</p>
+        <p>Menu: <a href=${restaurant.menu_url}></a></p>
+        <img src=${restaurant.photos_url} alt='foodLOL'>
+        `-->
+  </section>
+  
   <script src='https://code.jquery.com/jquery-3.4.0.min.js'
     integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-  <script>
-    const cities = ['Beirut', 'Charleston, South Carolina', 'Chicago', 'Florence', 'New Orleans', 'New York City', 'Milan', 'Rome', 'Paris', 'Singapore']
-    $(function () {
-      const restaurantApp = {};
-      restaurantApp.apiKey = 'f2af26c3d6f76bd1f3cc5cba0be539fa';
-      function getCityDetails(city) {
-        return $.ajax({
-          url: `https://developers.zomato.com/api/v2.1/locations?query=${city}`,
-          dataType: 'JSON',
-          method: 'GET',
-          headers: {
-            'user-key': restaurantApp.apiKey
-          }
-        }).then((res) => {
-          const cityId = res['location_suggestions'][0].entity_id;
-          function getCityRestaurants(cityId, city) {
-            return $.ajax({
-              url: `https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&q=${city}&count=10&sort=rating&order=desc`,
-              dataType: 'JSON',
-              method: 'GET',
-              headers: {
-                'user-key': restaurantApp.apiKey
-              }
-            }).then((res) => {
-              console.log(res);
-            })
-          }
-          getCityRestaurants(cityId, cities[0]);
-        })
-      }
-      getCityDetails(cities[0]);
-    });
-  </script>
 </body>
 
 </html>
