@@ -1,107 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top 10 Restaurants of the Food Cities 2020 - Zomato API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+  <title>Top 10 Restaurants in Best Food Cities 2020 - Zomato API Project</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
-
-  <section class="cityRestaurants">
-    <!-- Where 'top 10 restaurants' will dynamically append when chosen city is clicked -->
-    <!--`
-        <h2>${city}</h2>
+  <header>
+    <div class="wrapper">
+      <h1><span class='underline'>Presenting:</span><span>The <strong>Best</strong> Food Cities of 2020</span></h1>
+      <p>Explore the Top 10 Restaurants in the Following Cities!</p>
+      <button>Click Here!</button>
+    </div>
+  </header>
+  <main>
+    <section class="cityGallery">
+      <div class="wrapper">
         <ul>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-          <button>
-            <li>
-              <h3>${restaurant.name}</h3>
-              <p>${restaurant.cuisines}</p> OR could do <p>${location.locality}</p>
-            </li>
-          </button>
-        </ul>  
-        `-->
-  </section>
-  <section class="restaurantDetails">
-    <!-- Where a restaurant, chosen above ('on click'), will dynamically append it's details -->
-    <!--` 
-        <h3>${restaurant.name}</h3>
-        <p>Specialty: ${restaurant.cuisines}</p>
-        <p>Location: ${restaurant.address}</p> OR <p>Neighborhood: ${restaurant.locality}</p>
-        <p>Menu: <a href=${restaurant.menu_url}></a></p>
-        <img src=${restaurant.photos_url} alt='foodLOL'>
-        `-->
-  </section>
-  
+          <li>
+            <button>
+              <p class="number">1</p>
+              <h2>Beirut</h2>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <p class="number">2</p>
+              <h2>New Orleans</h2>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <p class="number">3</p>
+              <h2>Florence</h2>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <p class="number">4</p>
+              <h2>Rome</h2>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <p class="number">5</p>
+              <h2>Charleston</h2>
+            </button>
+          </li>
+
+          <li>
+          <li>
+            <button>
+              <p class="number">6</p>
+              <h2>Singapore</h2>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <p class="number">7</p>
+              <h2>Paris</h2>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <p class="number">8</p>
+              <h2>New York City</h2>
+            </button>
+          </li>    
+
+          <li>
+            <button>
+              <p class="number">9</p>
+              <h2>Bologna</h2>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <p class="number">10</p>
+              <h2>Chicago</h2>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id ="restaurantList"class="cityRestaurants">
+      <!-- Where 'top 10 restaurants' will dynamically append when chosen city is clicked -->
+
+      <h2 class="cityTitle"></h2>
+      <ul class="restuarantList">
+      </ul>
+
+    </section>
+
+    <section class="restaurantDetails">
+      <!-- Where a restaurant, chosen above ('on click'), will dynamically append it's details -->
+      <!--` 
+      <h3>${restaurant.name}</h3>
+      <p>Specialty: ${restaurant.cuisines}</p>
+      <p>Location: ${restaurant.address}</p> OR <p>Neighborhood: ${restaurant.locality}</p>
+      <p>Menu: <a href=${restaurant.menu_url}></a></p>
+      <img src=${restaurant.photos_url} alt='foodLOL'>
+      `-->
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+
   <script src='https://code.jquery.com/jquery-3.4.0.min.js'
     integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-</body>
 
+  <script src='./scripts.js'></script>
+</body>
 </html>
+
+<!-- ASSETS REF -->
+<!-- Beirut: Photo by Jo Kassis from Pexels -->
+<!-- New Orleans: Photo by Kendall Hoopes from Pexels -->
+<!-- Florence: Photo by Pixabay from Pexels -->
+<!-- Rome: Photo by Pixabay from Pexels -->
+<!-- Charleston: Image by <a href="https://pixabay.com/users/markjhemmings9-10680176/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4036370">Mark Hemmings</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4036370">Pixabay</a> -->
+<!-- Singapore: Photo by Kin Pastor from Pexels -->
+<!-- Paris: Photo by Flo Dahm from Pexels -->
+<!-- New York City: Photo by Vlad Alexandru Popa from Pexels -->
+<!-- Bologna: Photo by Andrea Piacquadio from Pexels -->
+<!-- Chicago: Photo by Bhargava Marripati from Pexels -->

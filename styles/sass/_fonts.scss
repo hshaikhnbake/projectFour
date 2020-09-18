@@ -1,0 +1,15 @@
+$baseFontStack: (
+  ('Changa One', cursive)
+);
+
+html {
+  font-size: 62.5;
+}
+
+.number {
+  font-family: $baseFontStack;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+.underline {
+  text-decoration: underline;
+}

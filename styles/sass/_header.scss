@@ -1,0 +1,18 @@
+@mixin flexRow {
+  display: flex;
+}
+
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+header {
+  @include center;
+  span {
+  display: block;
+  }
+}
+

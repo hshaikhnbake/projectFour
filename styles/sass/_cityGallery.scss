@@ -1,0 +1,34 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+}
+@mixin wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cityGallery {
+  @include center;
+
+  ul{
+    @include wrap;
+    justify-content: space-between;
+
+    li {
+      margin: 20px 0;
+    }
+
+    button {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+
+    .number{
+      position: absolute;
+      top: -13%;
+      left: -5%;
+
+    }
+  }
+}

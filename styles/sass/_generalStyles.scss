@@ -1,0 +1,23 @@
+
+.wrapper {
+  width: 85%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header,
+section {
+  min-height: 100vh;
+}
+
+// ON CLICK, SHOW NEXT SECTION (BY SECTION)
+// section {
+//   display: none;
+// }
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
