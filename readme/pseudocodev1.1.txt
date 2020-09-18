@@ -1,5 +1,9 @@
 // Outline Zomoto API and MapQuest API
 
+// Create a way to allow the user to choose a location and neighbourhood and display restaurants. Listen for Change On The Drop Down Menu and Grab Value to Update API
+
+// Update Change on Drop Down Menu Into A <h2> or <h3> in the DOM 
+
 // Create a Function That Gets Restaurant Data from Zomoto 
 
 // Create a Function That Displays a Map
@@ -7,10 +11,5 @@
 // Zomoto locational data passed down to MapQuest API
 
 // Have Zomoto Restaurant Data Post to the DOM
-
-// Create a way to allow the user to choose a location and neighbourhood and display restaurants. Listen for Change On The Drop Down Menu and Grab Value to Update API
-
-// Update Change on Drop Down Menu Into A <h2> or <h3> in the DOM 
-
 
 

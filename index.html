@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Restaurants of the Food Cities 2020 - Zomato API</title>
+</head>
+
+<body>
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+    integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script>
+    const cities = ['Beirut', 'Charleston, South Carolina', 'Chicago', 'Florence', 'New Orleans', 'New York City', 'Milan', 'Rome', 'Paris', 'Singapore']
+    $(function () {
+      const restaurantApp = {};
+      restaurantApp.apiKey = 'f2af26c3d6f76bd1f3cc5cba0be539fa';
+      function getCityDetails(city) {
+        return $.ajax({
+          url: `https://developers.zomato.com/api/v2.1/locations?query=${city}`,
+          dataType: 'JSON',
+          method: 'GET',
+          headers: {
+            'user-key': restaurantApp.apiKey
+          }
+        }).then((res) => {
+          const cityId = res['location_suggestions'][0].entity_id;
+          function getCityRestaurants(cityId, city) {
+            return $.ajax({
+              url: `https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&q=${city}&count=10&sort=rating&order=desc`,
+              dataType: 'JSON',
+              method: 'GET',
+              headers: {
+                'user-key': restaurantApp.apiKey
+              }
+            }).then((res) => {
+              console.log(res);
+            })
+          }
+          getCityRestaurants(cityId, cities[0]);
+        })
+      }
+      getCityDetails(cities[0]);
+    });
+  </script>
+</body>
+
+</html>
