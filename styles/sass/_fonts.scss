@@ -1,15 +1,21 @@
-$baseFontStack: (
-  ('Changa One', cursive)
+$primaryFont: (
+  ('Nunito Sans')
 );
 
+$secondaryFont: ('Halant');
+
 html {
-  font-size: 62.5;
+  font-size: 62.5%;
+  font-family: $primaryFont;
+  background-color: #211a23;
+
 }
 
 .number {
-  font-family: $baseFontStack;
+  font-family: $primaryFont;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
-.underline {
-  text-decoration: underline;
+
+h1, h2, h3 {
+  font-family: $secondaryFont;
 }

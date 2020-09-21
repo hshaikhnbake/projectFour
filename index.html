@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet">
   <title>Top 10 Restaurants in Best Food Cities 2020 - Zomato API Project</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -12,107 +12,97 @@
     <div class="wrapper">
       <h1><span class='underline'>Presenting:</span><span>The <strong>Best</strong> Food Cities of 2020</span></h1>
       <p>Explore the Top 10 Restaurants in the Following Cities!</p>
-      <button>Click Here!</button>
+      <button>Let's Explore!</button>
     </div>
   </header>
   <main>
-    <section class="cityGallery">
+    <section class="cityGallery galleryFlex">
       <div class="wrapper">
+        <h2>Choose Your City</h2>
+      </div>
         <ul>
           <li>
-            <button>
-              <p class="number">1</p>
-              <h2>Beirut</h2>
+            <button class="cityButton" value="Beirut">
+              <div class="overlay">
+                <p class="number">1</p>
+                <h2>Beirut, <span>Lebanon</span></h2>
+              </div>
             </button>
           </li>
-
           <li>
-            <button>
+            <button class="cityButton" value="New Orleans">
               <p class="number">2</p>
-              <h2>New Orleans</h2>
+              <div class="overlay"><h2>New Orleans, <span>Louisiana</span></h2></div>
             </button>
           </li>
-
           <li>
-            <button>
+            <button class="cityButton" value="Kuala Lumpur">
               <p class="number">3</p>
-              <h2>Florence</h2>
+              <div class="overlay"><h2>Kuala Lumpur, <span>Malaysia</span></h2></div>
             </button>
           </li>
-
           <li>
-            <button>
+            <button class="cityButton" value="Rome">
               <p class="number">4</p>
-              <h2>Rome</h2>
+              <div class="overlay"><h2>Rome, <span>Italy</span></h2></div>
             </button>
           </li>
-
           <li>
-            <button>
+            <button class="cityButton" value="Charleston">
               <p class="number">5</p>
-              <h2>Charleston</h2>
+              <div class="overlay"><h2>Charleston, <span>South Carolina</span></h2></div>
             </button>
           </li>
-
           <li>
           <li>
-            <button>
+            <button class="cityButton" value="Singapore">
               <p class="number">6</p>
-              <h2>Singapore</h2>
+              <div class="overlay"><h2>Singapore, <span>Singapore</span></h2></div>
             </button>
           </li>
-
           <li>
-            <button>
+            <button class="cityButton" value="Toronto">
               <p class="number">7</p>
-              <h2>Paris</h2>
+              <div class="overlay"><h2>Toronto, <span>Ontario</span></h2></div>
             </button>
           </li>
-
           <li>
-            <button>
+            <button class="cityButton" value="New York City">
               <p class="number">8</p>
-              <h2>New York City</h2>
+              <div class="overlay"><h2>New York City, <span>New York State</span></h2></div>
             </button>
-          </li>    
-
+          </li>
           <li>
-            <button>
+            <button class="cityButton" value="Bologna">
               <p class="number">9</p>
-              <h2>Bologna</h2>
+              <div class="overlay"><h2>Bologna, <span>Roma</span></h2></div>
             </button>
           </li>
-
           <li>
-            <button>
+            <button class="cityButton" value="Chicago">
               <p class="number">10</p>
-              <h2>Chicago</h2>
+              <div class="overlay"><h2>Chicago, <span>Illinois</span></h2></div>
             </button>
           </li>
+        </ul>
+    </section>
+    
+    <section class="cityRestaurants">
+      <div class="wrapper">
+        <h2 class="cityTitle"></h2>
+        <ul class="restaurantList">
+          <!-- Where 'top 10 restaurants' will dynamically append when chosen city is clicked -->
         </ul>
       </div>
     </section>
 
-    <section id ="restaurantList"class="cityRestaurants">
-      <!-- Where 'top 10 restaurants' will dynamically append when chosen city is clicked -->
-
-      <h2 class="cityTitle"></h2>
-      <ul class="restuarantList">
-      </ul>
-
+    <section class="restaurant">
+      <div class="wrapper">
+        <div class="restaurantDetails">
+          <!-- Where a restaurant, chosen above ('on click'), will dynamically append it's details -->
+        </div>
+      </div>
     </section>
-
-    <section class="restaurantDetails">
-      <!-- Where a restaurant, chosen above ('on click'), will dynamically append it's details -->
-      <!--` 
-      <h3>${restaurant.name}</h3>
-      <p>Specialty: ${restaurant.cuisines}</p>
-      <p>Location: ${restaurant.address}</p> OR <p>Neighborhood: ${restaurant.locality}</p>
-      <p>Menu: <a href=${restaurant.menu_url}></a></p>
-      <img src=${restaurant.photos_url} alt='foodLOL'>
-      `-->
-    </section>
-  </main>
 
   <footer>
 

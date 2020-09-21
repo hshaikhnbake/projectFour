@@ -298,16 +298,18 @@ select {
 }
 
 html {
-  font-size: 62.5;
+  font-size: 62.5%;
+  font-family: "Nunito Sans";
+  background-color: #211a23;
 }
 
 .number {
-  font-family: "Changa One", cursive;
+  font-family: "Nunito Sans";
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-.underline {
-  text-decoration: underline;
+h1, h2, h3 {
+  font-family: "Halant";
 }
 
 .wrapper {
@@ -340,13 +342,205 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 12, 12, 0.45))), url("./assets/hero.jpg");
+  background: linear-gradient(rgba(12, 12, 12, 0.45)), url("./assets/hero.jpg");
+  background-size: cover;
 }
 
 header span {
   display: block;
 }
 
+header h1 {
+  font-size: clamp(2.8rem, 8vw, 8.5rem);
+  display: inline-block;
+  color: #FFFFFF;
+  margin: 10px 0;
+}
+
+header h1 .underline {
+  color: white;
+  position: relative;
+}
+
+header h1 .underline::after {
+  content: '';
+  display: inline-block;
+  background: rgba(230, 86, 25, 0.4);
+  width: 38%;
+  height: 15%;
+  position: absolute;
+  bottom: 22%;
+  left: 30%;
+}
+
+header p {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: white;
+}
+
+header button {
+  display: inline-block;
+  border: 1px solid #EB7847;
+  padding: 1rem 2rem;
+  margin: 3rem 0;
+  text-decoration: none;
+  background-color: rgba(235, 120, 71, 0.2);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: #ffffff;
+  text-align: center;
+}
+
 .cityGallery {
+  padding: 40px 0;
+}
+
+.cityGallery h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  padding: 20px 0;
+}
+
+.cityGallery li {
+  margin: 20px 0;
+  display: block;
+  width: 100%;
+}
+
+.cityGallery button {
+  height: 150px;
+  width: 100%;
+  color: white;
+  position: relative;
+  display: block;
+}
+
+.cityGallery button .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 150px;
+  top: 0;
+}
+
+.cityGallery button h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.cityGallery button[value] {
+  background-size: cover;
+  background-position: center;
+}
+
+.cityGallery button[value="Beirut"] {
+  background-image: url("./assets/beirut.jpg");
+  background-position: center bottom;
+}
+
+.cityGallery button[value="New Orleans"] {
+  background-image: url("./assets/newOrleans.jpg");
+  background-position: center;
+}
+
+.cityGallery button[value="Kuala Lumpur"] {
+  background-image: url("./assets/kualaLumpur.jpg");
+  background-position: center bottom;
+}
+
+.cityGallery button[value="Rome"] {
+  background-image: url("./assets/rome.jpg");
+}
+
+.cityGallery button[value="Charleston"] {
+  background-image: url("./assets/charleston.jpg");
+}
+
+.cityGallery button[value="Singapore"] {
+  background-image: url("./assets/singapore.jpg");
+}
+
+.cityGallery button[value="Toronto"] {
+  background-image: url("./assets/toronto.jpg");
+  background-position: center;
+}
+
+.cityGallery button[value="New York City"] {
+  background-image: url("./assets/nyc.jpg");
+}
+
+.cityGallery button[value="Bologna"] {
+  background-image: url("./assets/bologna.jpg");
+}
+
+.cityGallery button[value="Chicago"] {
+  background-image: url("./assets/chicago.jpg");
+}
+
+.cityGallery button .number {
+  position: absolute;
+  top: -13%;
+  left: -5%;
+}
+
+@media (max-width: 768px) {
+  .restaurantList li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .restaurantList h3 {
+    border-right: 0px;
+    border-bottom: 1px solid #EB7847;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+}
+
+.cityRestaurants {
+  padding: 40px 0;
+}
+
+.cityRestaurants h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  padding: 20px 0;
+}
+
+.restaurantList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.restaurantList button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #E65619;
+  border-radius: 5px;
+  color: white;
+}
+
+.restaurantList li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,29 +549,16 @@ header span {
           align-items: center;
 }
 
-.cityGallery ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.restaurantList h3 {
+  border-right: 1px solid #EB7847;
+  margin-right: 10px;
+  padding-right: 10px;
 }
 
-.cityGallery ul li {
-  margin: 20px 0;
+.restaurantDetails {
+  border: 2px solid #EB7847;
 }
 
-.cityGallery ul button {
-  width: 200px;
-  height: 200px;
-  position: relative;
-}
-
-.cityGallery ul .number {
-  position: absolute;
-  top: -13%;
-  left: -5%;
+.restaurantDetails h3 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
