@@ -1,18 +1,32 @@
+@mixin columnFlexCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 @media (max-width: 768px) {
-    .restaurantList {
-        li {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        h3 {
-            border-right: 0;
-            border-bottom: 1px solid #EB7847;
-            margin-right: 0;
-            padding-right: 0;
-        }
-        p {
-            padding: 10px 0;
-        }
+  .restaurantList {
+    li {
+      @include columnFlexCenter;
     }
+
+    h3 {
+      border-right: 0;
+      border-bottom: 1px solid #EB7847;
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    p {
+      padding: 10px 0;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .cityGallery {
+    span {
+      display: inline-block;
+    }
+  }
 }

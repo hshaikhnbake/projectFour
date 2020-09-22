@@ -1,0 +1,39 @@
+.restaurant {
+	min-height: 95vh;
+	display: flex;
+	align-items: center;
+
+	.restaurantDetails {
+		padding: 30px;
+
+		h3 {
+			position: relative;
+			border-bottom: 1px solid #EB7847;
+		}
+
+		p {
+			margin: 10px 0px;
+		}
+	}
+	
+	.underline {
+		border-bottom: 1px solid #EB7847;
+		text-transform: uppercase;
+	}
+	
+	.anotherResto {
+		display: none;
+		min-width: 30%;
+		height: 20px;
+		margin-top: 5px;
+		float: right;
+		transition: all 0.3s ease-in-out;
+
+		&:hover,
+    &:focus {
+      opacity: 0.7;
+      color: rgb(216, 111, 62);
+      text-shadow: 0.1px 0.1px 2px rgb(218, 64, 18);
+    }
+	}
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500&family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@600&family=Nunito+Sans&display=swap" rel="stylesheet">
   <title>Top 10 Restaurants in Best Food Cities 2020 - Zomato API Project</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -16,7 +16,7 @@
     </div>
   </header>
   <main>
-    <section class="cityGallery galleryFlex">
+    <section class="cityGallery">
       <div class="wrapper">
         <h2 class="cityGalleryHeader">Choose Your City</h2>
       </div>
@@ -24,63 +24,53 @@
           <li>
             <button class="cityButton" value="Beirut">
               <div class="overlay">
-                <p class="number">1</p>
                 <h2>Beirut, <span>Lebanon</span></h2>
               </div>
             </button>
           </li>
           <li>
             <button class="cityButton" value="New Orleans">
-              <p class="number">2</p>
               <div class="overlay"><h2>New Orleans, <span>Louisiana</span></h2></div>
             </button>
           </li>
           <li>
             <button class="cityButton" value="Kuala Lumpur">
-              <p class="number">3</p>
               <div class="overlay"><h2>Kuala Lumpur, <span>Malaysia</span></h2></div>
             </button>
           </li>
           <li>
             <button class="cityButton" value="Rome">
-              <p class="number">4</p>
               <div class="overlay"><h2>Rome, <span>Italy</span></h2></div>
             </button>
           </li>
           <li>
             <button class="cityButton" value="Charleston">
-              <p class="number">5</p>
               <div class="overlay"><h2>Charleston, <span>South Carolina</span></h2></div>
             </button>
           </li>
           <li>
           <li>
             <button class="cityButton" value="Singapore">
-              <p class="number">6</p>
               <div class="overlay"><h2>Singapore, <span>Singapore</span></h2></div>
             </button>
           </li>
           <li>
             <button class="cityButton" value="Toronto">
-              <p class="number">7</p>
               <div class="overlay"><h2>Toronto, <span>Ontario</span></h2></div>
             </button>
           </li>
           <li>
             <button class="cityButton" value="New York City">
-              <p class="number">8</p>
               <div class="overlay"><h2>New York City, <span>New York State</span></h2></div>
             </button>
           </li>
           <li>
             <button class="cityButton" value="Los Angeles">
-              <p class="number">9</p>
               <div class="overlay"><h2>Los Angeles, <span>California</span></h2></div>
             </button>
           </li>
           <li>
             <button class="cityButton" value="Chicago">
-              <p class="number">10</p>
               <div class="overlay"><h2>Chicago, <span>Illinois</span></h2></div>
             </button>
           </li>
@@ -93,6 +83,7 @@
         <ul class="restaurantList">
           <!-- Where 'top 10 restaurants' will dynamically append when chosen city is clicked -->
         </ul>
+        <button class="anotherCity" id="anotherCity">Choose another city</button>
       </div>
     </section>
 
@@ -101,28 +92,16 @@
         <div class="restaurantDetails">
           <!-- Where a restaurant, chosen above ('on click'), will dynamically append it's details -->
         </div>
+        <button class="anotherResto" id="anotherResto">Choose another restaurant</button>
       </div>
     </section>
 
   <footer>
-
+    <p>Created at <a class="underline" href="https://junocollege.com/" target="_blank"> Juno College</a> &copy; 2020</p>
   </footer>
 
-  <script src='https://code.jquery.com/jquery-3.4.0.min.js'
-    integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
 
   <script src='./scripts.js'></script>
 </body>
 </html>
-
-<!-- ASSETS REF -->
-<!-- Beirut: Photo by Jo Kassis from Pexels -->
-<!-- New Orleans: Photo by Kendall Hoopes from Pexels -->
-<!-- Florence: Photo by Pixabay from Pexels -->
-<!-- Rome: Photo by Pixabay from Pexels -->
-<!-- Charleston: Image by <a href="https://pixabay.com/users/markjhemmings9-10680176/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4036370">Mark Hemmings</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4036370">Pixabay</a> -->
-<!-- Singapore: Photo by Kin Pastor from Pexels -->
-<!-- Paris: Photo by Flo Dahm from Pexels -->
-<!-- New York City: Photo by Vlad Alexandru Popa from Pexels -->
-<!-- Bologna: Photo by Andrea Piacquadio from Pexels -->
-<!-- Chicago: Photo by Bhargava Marripati from Pexels -->
