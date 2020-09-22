@@ -11,16 +11,19 @@
 
 header {
   @include center;
-  span {
-  display: block;
-  }
+
   background: linear-gradient(rgba(12,12,12,0.45)), url('./assets/hero.jpg'), ;
   background-size: cover;
+  span {
+    display: block;
+  }
   h1 {
-  font-size: clamp(2.8rem, 8vw, 8.5rem);
-  display: inline-block; 
-  color: #FFFFFF;
-  margin: 10px 0;
+    font-size: clamp(2.8rem, 8vw, 8.5rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block; 
+    color: #FFFFFF;
+    margin: 10px 0;
     .underline {
       color: white;
       position: relative;
@@ -28,11 +31,11 @@ header {
         content:'';
           display: inline-block;
           background: rgba(230, 86, 25, 0.4);
-          width: 38%;
+          width: 45%;
           height: 15%;
           position: absolute;
-          bottom: 22%;
-          left: 30%;
+          bottom: 25%;
+          left: 27%;
       }
     }
   }

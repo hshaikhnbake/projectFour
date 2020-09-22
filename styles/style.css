@@ -301,6 +301,7 @@ html {
   font-size: 62.5%;
   font-family: "Nunito Sans";
   background-color: #211a23;
+  color: whitesmoke;
 }
 
 .number {
@@ -353,6 +354,8 @@ header span {
 
 header h1 {
   font-size: clamp(2.8rem, 8vw, 8.5rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
   display: inline-block;
   color: #FFFFFF;
   margin: 10px 0;
@@ -367,11 +370,11 @@ header h1 .underline::after {
   content: '';
   display: inline-block;
   background: rgba(230, 86, 25, 0.4);
-  width: 38%;
+  width: 45%;
   height: 15%;
   position: absolute;
-  bottom: 22%;
-  left: 30%;
+  bottom: 25%;
+  left: 27%;
 }
 
 header p {
@@ -395,9 +398,16 @@ header button {
   padding: 40px 0;
 }
 
+.cityGallery .cityGalleryHeader {
+  font-size: clamp(3.8rem, 5vw, 5.5rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
 .cityGallery h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 3.5rem);
   padding: 20px 0;
+  color: whitesmoke;
 }
 
 .cityGallery li {
@@ -425,14 +435,14 @@ header button {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(78, 45, 32, 0.7);
   width: 100%;
   height: 150px;
   top: 0;
 }
 
-.cityGallery button h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+.cityGallery button span {
+  font-weight: 400;
 }
 
 .cityGallery button[value] {
@@ -476,8 +486,9 @@ header button {
   background-image: url("./assets/nyc.jpg");
 }
 
-.cityGallery button[value="Bologna"] {
-  background-image: url("./assets/bologna.jpg");
+.cityGallery button[value="Los Angeles"] {
+  background-image: url("./assets/losAngeles.jpg");
+  background-position: center;
 }
 
 .cityGallery button[value="Chicago"] {
@@ -490,34 +501,14 @@ header button {
   left: -5%;
 }
 
-@media (max-width: 768px) {
-  .restaurantList li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .restaurantList h3 {
-    border-right: 0px;
-    border-bottom: 1px solid #EB7847;
-    margin-right: 10px;
-    padding-right: 10px;
-  }
-}
-
 .cityRestaurants {
   padding: 40px 0;
 }
 
 .cityRestaurants h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  padding: 20px 0;
+  font-size: clamp(3.8rem, 5vw, 5.5rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .restaurantList {
@@ -537,7 +528,7 @@ header button {
   margin: 1rem 0;
   background-color: #E65619;
   border-radius: 5px;
-  color: white;
+  color: whitesmoke;
 }
 
 .restaurantList li {
@@ -553,12 +544,49 @@ header button {
   border-right: 1px solid #EB7847;
   margin-right: 10px;
   padding-right: 10px;
+  font-size: clamp(1.8rem, 3vw, 1.5rem);
+  letter-spacing: 1px;
 }
 
 .restaurantDetails {
-  border: 2px solid #EB7847;
+  border: 2px solid #E65619;
+  padding: 10px;
 }
 
 .restaurantDetails h3 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(3.8rem, 5vw, 5.5rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  color: whitesmoke;
+  border-bottom: 1px solid #EB7847;
+}
+
+.restaurantDetails p {
+  font-size: clamp(1.8rem, 3vw, 1.5rem);
+  margin: 10px 0px;
+}
+
+@media (max-width: 768px) {
+  .restaurantList li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .restaurantList h3 {
+    border-right: 0;
+    border-bottom: 1px solid #EB7847;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .restaurantList p {
+    padding: 10px 0;
+  }
 }

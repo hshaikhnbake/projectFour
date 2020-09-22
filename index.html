@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500&family=Nunito+Sans&display=swap" rel="stylesheet">
   <title>Top 10 Restaurants in Best Food Cities 2020 - Zomato API Project</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -12,13 +12,13 @@
     <div class="wrapper">
       <h1><span class='underline'>Presenting:</span><span>The <strong>Best</strong> Food Cities of 2020</span></h1>
       <p>Explore the Top 10 Restaurants in the Following Cities!</p>
-      <button>Let's Explore!</button>
+      <button id="showGallery">Let's Explore!</button>
     </div>
   </header>
   <main>
     <section class="cityGallery galleryFlex">
       <div class="wrapper">
-        <h2>Choose Your City</h2>
+        <h2 class="cityGalleryHeader">Choose Your City</h2>
       </div>
         <ul>
           <li>
@@ -73,9 +73,9 @@
             </button>
           </li>
           <li>
-            <button class="cityButton" value="Bologna">
+            <button class="cityButton" value="Los Angeles">
               <p class="number">9</p>
-              <div class="overlay"><h2>Bologna, <span>Roma</span></h2></div>
+              <div class="overlay"><h2>Los Angeles, <span>California</span></h2></div>
             </button>
           </li>
           <li>
