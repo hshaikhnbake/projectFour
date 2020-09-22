@@ -354,12 +354,12 @@ header button {
 }
 
 .restaurantDetails p, .restaurantDetails a {
-  font-size: clamp(1.8rem, 3vw, 1.5rem);
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
   letter-spacing: 4px;
 }
 
 footer {
-  font-size: clamp(1.8rem, 3vw, 1.5rem);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   letter-spacing: 4px;
 }
 
@@ -650,7 +650,7 @@ header button:hover, header button:focus {
 .cityRestaurants .anotherCity {
   display: none;
   min-width: 30%;
-  height: 20px;
+  min-height: 20px;
   margin-top: 5px;
   float: right;
   -webkit-transition: all 0.3s ease-in-out;
@@ -694,7 +694,7 @@ header button:hover, header button:focus {
 .restaurant .anotherResto {
   display: none;
   min-width: 30%;
-  height: 20px;
+  min-height: 20px;
   margin-top: 5px;
   float: right;
   -webkit-transition: all 0.3s ease-in-out;

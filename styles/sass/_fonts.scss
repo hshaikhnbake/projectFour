@@ -63,12 +63,12 @@ header {
   }
 
   p, a {
-    font-size: clamp(1.8rem, 3vw, 1.5rem);
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
     letter-spacing: 4px;
   }
 }
 
 footer {
-  font-size: clamp(1.8rem, 3vw, 1.5rem);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   letter-spacing: 4px;
 }
