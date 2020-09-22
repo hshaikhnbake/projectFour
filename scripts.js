@@ -100,8 +100,6 @@ restaurantApp.init = (function () {
     $('.restaurantList').empty();
     $('.cityRestaurants').hide();
     smoothScroll($('.cityGallery'));
-    // $('#anotherCity').fadeOut();
-    // smoothScroll($('.cityGallery'));
   })
 
   $('#anotherResto').click(function () {
