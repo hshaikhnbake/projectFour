@@ -1,0 +1,74 @@
+$headingFont: 'Halant', serif;
+$bodyFont: 'Nunito Sans', sans-serif;
+
+html {
+  font-size: 62.5%;
+  font-family: $bodyFont;
+}
+
+h1, h2, h3 {
+  font-family: $headingFont;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 8.5rem);
+  letter-spacing: 2px;
+}
+
+h2, h3 {
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 3.5rem);
+}
+
+.cityGalleryHeader {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+}
+
+header {
+  p,
+  button {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+  }
+
+  p {
+    letter-spacing: 1px;
+  }
+
+  button {
+    letter-spacing: 2px;
+  }
+}
+
+.cityRestaurants {
+  h3 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}
+
+.anotherCity, .anotherResto {
+  font-size: clamp(1.8rem, 1vw, 3rem);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.restaurantDetails {
+  h3 {
+    font-size: clamp(3.8rem, 5vw, 5.5rem);
+  }
+
+  p, a {
+    font-size: clamp(1.5rem, 1vw, 1.8rem);
+    letter-spacing: 4px;
+  }
+}
+
+footer {
+  font-size: clamp(1.4rem, 1vw, 1.8rem);
+  letter-spacing: 4px;
+}

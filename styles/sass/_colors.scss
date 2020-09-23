@@ -1,0 +1,45 @@
+$text: #f7f5f5;
+$body: #211a23;
+$primaryColor:  #E65619;
+$secondaryColor:  #EB7847;
+$buttonOverlay: rgba(78, 45, 32, 0.7);
+
+body {
+  background-color: $body;
+  color: $text;
+}
+
+button {
+  color: $text;
+}
+
+header {
+  p {
+    text-shadow: 0.1px 0.1px 2px $secondaryColor;
+  }
+}
+
+.overlay {
+  background-color: $buttonOverlay;
+}
+
+.restaurantList {
+  button {
+    background-color: $primaryColor;
+  }
+}
+
+.anotherCity, .anotherResto {
+    background-color: $body;
+}
+
+.restaurantDetails a,
+footer a {
+  color: $primaryColor;
+  transition: all 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    color: $secondaryColor;
+    text-shadow: 0.1px 0.1px 2px #ca4f30;
+  }
+}

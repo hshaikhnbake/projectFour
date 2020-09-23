@@ -1,0 +1,60 @@
+@mixin flexRow {
+  display: flex;
+}
+
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+header {
+  @include center;
+
+  background: linear-gradient(rgba(12,12,12,0.5)), url('./assets/hero.jpg'), ;
+  background-size: cover;
+
+  h1 {
+    display: inline-block; 
+    color: #FFFFFF;
+    margin: 10px 0;
+    .underline {
+      color: white;
+      position: relative;
+
+      &::after {
+        content:'';
+        display: inline-block;
+        background: rgba(230, 86, 25, 0.4);
+        width: 45%;
+        height: 15%;
+        position: absolute;
+        bottom: 25%;
+        left: 27%;
+      }
+    }
+  }
+
+  span {
+    display: block;
+  }
+
+  button {
+    display: inline-block;
+    border: 1px solid #EB7847;
+    padding: 1rem 2rem;
+    margin: 3rem 0;
+    text-decoration: none;
+    background-color: rgba(235, 120, 71,0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      background-color: #E65619;
+      box-shadow: 2px 2px 2px #d2896a;
+    }
+  }
+}

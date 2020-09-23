@@ -1,48 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top 10 Restaurants of the Food Cities 2020 - Zomato API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@600&family=Nunito+Sans&display=swap" rel="stylesheet">
+  <title>Top 10 Restaurants in Best Food Cities 2020 - Zomato API Project</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
-  <script src='https://code.jquery.com/jquery-3.4.0.min.js'
-    integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-  <script>
-    const cities = ['Beirut', 'Charleston, South Carolina', 'Chicago', 'Florence', 'New Orleans', 'New York City', 'Milan', 'Rome', 'Paris', 'Singapore']
-    $(function () {
-      const restaurantApp = {};
-      restaurantApp.apiKey = 'f2af26c3d6f76bd1f3cc5cba0be539fa';
-      function getCityDetails(city) {
-        return $.ajax({
-          url: `https://developers.zomato.com/api/v2.1/locations?query=${city}`,
-          dataType: 'JSON',
-          method: 'GET',
-          headers: {
-            'user-key': restaurantApp.apiKey
-          }
-        }).then((res) => {
-          const cityId = res['location_suggestions'][0].entity_id;
-          function getCityRestaurants(cityId, city) {
-            return $.ajax({
-              url: `https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&q=${city}&count=10&sort=rating&order=desc`,
-              dataType: 'JSON',
-              method: 'GET',
-              headers: {
-                'user-key': restaurantApp.apiKey
-              }
-            }).then((res) => {
-              console.log(res);
-            })
-          }
-          getCityRestaurants(cityId, cities[0]);
-        })
-      }
-      getCityDetails(cities[0]);
-    });
-  </script>
-</body>
+  <header>
+    <div class="wrapper">
+      <h1><span class='underline'>Presenting:</span><span>The <strong>Best</strong> Food Cities of 2020</span></h1>
+      <p>Explore the Top 10 Restaurants in the Following Cities!</p>
+      <button id="showGallery">Let's Explore!</button>
+    </div>
+  </header>
+  <main>
+    <section class="cityGallery">
+      <div class="wrapper">
+        <h2 class="cityGalleryHeader">Choose Your City</h2>
+      </div>
+        <ul>
+          <li>
+            <button class="cityButton" value="Beirut">
+              <div class="overlay">
+                <h2>Beirut, <span>Lebanon</span></h2>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button class="cityButton" value="New Orleans">
+              <div class="overlay"><h2>New Orleans, <span>Louisiana</span></h2></div>
+            </button>
+          </li>
+          <li>
+            <button class="cityButton" value="Kuala Lumpur">
+              <div class="overlay"><h2>Kuala Lumpur, <span>Malaysia</span></h2></div>
+            </button>
+          </li>
+          <li>
+            <button class="cityButton" value="Rome">
+              <div class="overlay"><h2>Rome, <span>Italy</span></h2></div>
+            </button>
+          </li>
+          <li>
+            <button class="cityButton" value="Charleston">
+              <div class="overlay"><h2>Charleston, <span>South Carolina</span></h2></div>
+            </button>
+          </li>
+          <li>
+          <li>
+            <button class="cityButton" value="Singapore">
+              <div class="overlay"><h2>Singapore, <span>Singapore</span></h2></div>
+            </button>
+          </li>
+          <li>
+            <button class="cityButton" value="Toronto">
+              <div class="overlay"><h2>Toronto, <span>Ontario</span></h2></div>
+            </button>
+          </li>
+          <li>
+            <button class="cityButton" value="New York City">
+              <div class="overlay"><h2>New York City, <span>New York State</span></h2></div>
+            </button>
+          </li>
+          <li>
+            <button class="cityButton" value="Los Angeles">
+              <div class="overlay"><h2>Los Angeles, <span>California</span></h2></div>
+            </button>
+          </li>
+          <li>
+            <button class="cityButton" value="Chicago">
+              <div class="overlay"><h2>Chicago, <span>Illinois</span></h2></div>
+            </button>
+          </li>
+        </ul>
+    </section>
+    
+    <section class="cityRestaurants">
+      <div class="wrapper">
+        <h2 class="cityTitle"></h2>
+        <ul class="restaurantList">
+          <!-- Where 'top 10 restaurants' will dynamically append when chosen city is clicked -->
+        </ul>
+        <button class="anotherCity" id="anotherCity">Choose another city</button>
+      </div>
+    </section>
 
+    <section class="restaurant">
+      <div class="wrapper">
+        <div class="restaurantDetails">
+          <!-- Where a restaurant, chosen above ('on click'), will dynamically append it's details -->
+        </div>
+        <button class="anotherResto" id="anotherResto">Choose another restaurant</button>
+      </div>
+    </section>
+
+  <footer>
+    <p>Created at <a class="underline" href="https://junocollege.com/" target="_blank"> Juno College</a> &copy; 2020</p>
+  </footer>
+
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+
+  <script src='./scripts.js'></script>
+</body>
 </html>
